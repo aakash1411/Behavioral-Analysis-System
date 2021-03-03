@@ -34,8 +34,8 @@ System requirements for a complete training are:
   * At least 30GB of free disk space on a fast SSD (250GB just for all the uncompressed + processed data)
   * 8GB of memory and at least 16GB of swap (can create swap with SSD space).
 
-### Test instruction using pretrained model
-  * Download the trained models
+## Test instruction using pretrained model
+### Download the trained models
  
 
  *Model name* | *Used datasets for training* | *Model Link* | 
@@ -45,7 +45,7 @@ Word2vec | [Sentiment140](http://www.sentiment140.com/) | [Click](https://drive.
 Tokenizer | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/blob/main/tokenizer.pkl)
 Encoder | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/blob/main/encoder.pkl)
 
-  * Run with pretrained model
+### Run with pretrained model
 
 ```python
 runfile('/functions.py')
@@ -56,6 +56,10 @@ if __name__ == "__main__":
     functions.user_evaluation(sentiment, score, keywords_str)
 ```
 
-
-
+## Output Evaluation 
+```python
+Depression detected
+Intensity: 99.57
+Keywords Detected: depressed
+```
 
