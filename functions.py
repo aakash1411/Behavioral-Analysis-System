@@ -148,7 +148,7 @@ with open(WORD2VEC_PICKLE, 'rb') as handle:
 
 
 # Loading Keywords for detection
-dictionary = pd.read_excel("Input/keyword_dictionary.xlsx")
+dictionary = pd.read_excel("keyword_dictionary.xlsx")
 suicide_dictionary = dictionary['keywords'].tolist()
 
 # Tokenizer for keyword detection
