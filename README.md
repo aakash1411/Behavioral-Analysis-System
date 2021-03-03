@@ -1,1 +1,50 @@
-# Behavioral-Analysis-System
+# Behavioral Analysis System: An end-to-end user depression detection system.
+## Business Problem
+Over the years, the number of suicide cases in the United States of America has exponentially increased and has been the leading cause of death throughout different age groups and genders. This is due to the lack of awareness related to mental health issues and moreover, the lack of access to care. This Scenario has developed in recent years, where a lot of depressed patients or patients who have been through trauma seek for programs that provide them behavioral healthcare. This is not enough as it is really difficult for the care providers to assess the time of crisis a patient can be in, and fail to provide care when it is needed the most in a time of relapses. Credits: [The State Of Mental Health In America](https://www.mhanational.org/issues/state-mental-health-america "Mental Health America")
+## Problem Statement
+Care providers enroll patients in a program where they maintain their thoughts and program related details in a digital journal. The intent here is to follow up on the digital journal and process their thoughts to understand their severity of depression and if there is any immediate threat to themselves or others around them.
+## Sources
+  * [Sentiment140](http://www.sentiment140.com/) - A Twitter Sentiment Analysis Tool.
+  * [Adam Optimization Algorithm for Deep Learning](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
+  * [SpaCy](https://spacy.io/) - Industrial-Strength Natural Language Processing
+## Getting Started
+### Install dependencies [[Requirements](Behavioral-Analysis-System/requirements.txt)]
+```bash
+pip install -r requirements.txt"
+```
+### Training
+The code for training is available in this [repository](Behavioral-Analysis-System/training_model.py). 
+
+```python
+runfile('/training_model.py')
+```
+
+System requirements for a complete training are:
+  * At least 30GB of free disk space on a fast SSD (250GB just for all the uncompressed + processed data)
+  * 8GB of memory and at least 16GB of swap (can create swap with SSD space).
+
+### Test instruction using pretrained model
+  * Download the trained models
+ 
+
+ *Model name* | *Used datasets for training* | *Model Link* | 
+ | :--- | :--- | :--- |
+bi-directional LSTM | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/model.h5)
+Word2vec | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/w2v_model.pkl)
+Tokenizer | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/tokenizer.pkl)
+Encoder | [Sentiment140](http://www.sentiment140.com/) | [Click](Behavioral-Analysis-System/encoder.pkl)
+
+  * Run with pretrained model
+
+```python
+runfile('/functions.py')
+import functions
+
+if __name__ == "__main__":
+    sentiment, score, keywords_str = functions.predict("I am really depressed.")
+    functions.user_evaluation(sentiment, score, keywords_str)
+```
+
+
+
+
