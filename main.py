@@ -1,4 +1,4 @@
-runfile('/Users/haven/Personal/Projects/Depression Detection/functions.py', wdir='/Users/haven/Personal/Projects/Depression Detection')
+runfile('/functions.py')
 import functions
 
 if __name__ == "__main__":
